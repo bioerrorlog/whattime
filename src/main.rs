@@ -1,3 +1,12 @@
+use clap::Parser;
+use chrono::Utc;
+
+#[derive(Parser)]
+struct Cli {
+    timezone: String,
+}
+
 fn main() {
-    println!("Hello, world!");
+    let dt = Utc::now();
+    println!("{}", dt);
 }
